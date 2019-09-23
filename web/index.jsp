@@ -1,3 +1,4 @@
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <!doctype html>
@@ -19,14 +20,14 @@
                 <center>
                     <div class="middle">
                         <div id="login">
-                            <form action="javascript:void(0);" method="get">
+                            <form name="login" method="post" action="Validacion.jsp">
                               <fieldset class="clearfix">
-                                <p ><span class="fa fa-user"></span><input type="text"  Placeholder="Username" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-                                <p><span class="fa fa-lock"></span><input type="password"  Placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                                  <p ><span class="fa fa-user"></span><input type="text" name="usuario" Placeholder="Username" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                                  <p><span class="fa fa-lock"></span><input type="password" name="contrasena" Placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
                                  <div>
                                      <span style="width:48%; text-align:left;  display: inline-block;"><a class="small-text" href="#">Forgot
                                                     password?</a></span>
-                                     <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit" value="Sign In"></span>
+                                     <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit" name="action" value="Sign In"></span>
                                  </div>
                              </fieldset>
                                 <div class="clearfix"></div>
@@ -37,7 +38,6 @@
                             <img src="Imagenes/Captura.PNG">
                             <div class="clearfix"></div>
                         </div>
-
                     </div>
                 </center>
             </div>
