@@ -20,7 +20,7 @@
                 <center>
                     <div class="middle">
                         <div id="login">
-                            <form name="login" method="post" action="Validacion.jsp">
+                            <form name="login" method="post" action="Controller/Validacion.jsp">
                               <fieldset class="clearfix">
                                   <p ><span class="fa fa-user"></span><input type="text" name="usuario" Placeholder="Username" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
                                   <p><span class="fa fa-lock"></span><input type="password" name="contrasena" Placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->

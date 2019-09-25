@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
+package Code;
 
 import java.sql.*;
 import java.util.logging.Level;
@@ -21,7 +21,7 @@ public class DbConnect {
         ResultSet rs;
         
 // MVALENCIA ES MI INSTANCIA DE SQL 
-        String url = "jdbc:sqlserver://MVALENCIA:1433;databaseName=GestionCarteraDB";
+        String url = "jdbc:sqlserver://DESKTOP-N23TVHT\\LOCALHOST:1433;databaseName=GestionCarteraDB";
         try {
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 mycon = DriverManager.getConnection(url,"sa","root");
