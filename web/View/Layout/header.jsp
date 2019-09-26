@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <title>Proyecto</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
-        <link rel="stylesheet" type="text/css" href="../../css/style.css">
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/ProyectoConstruccion/css/style.css">
     </head>
 
     <body>
@@ -13,7 +13,7 @@
             <!-- CABECERA -->
             <header id="header">
                 <div id="logo">
-                    <img src="../../Imagenes/logo.png"  />
+                    <img src="http://localhost:8080/ProyectoConstruccion/Imagenes/logo.png"  />
                     <a href="../">
                         Gestion de Cartera
                     </a>
@@ -21,24 +21,25 @@
             </header>
             <nav id="menu">
                 <ul>
-                    <li>
-                        <a href="../Home.jsp">Inicio</a>                       
+                    <li> 
+                        <!--Los llamdos de los jsp se debn hacer con la doreccion completa, dado que todos funcionan con el mismo style y con los header y footer, de otra forma en algunos casos nunca encontrara la pagina especificada-->
+                        <a href="http://localhost:8080/ProyectoConstruccion/View/Home.jsp">Inicio</a>                       
                     </li>
                     <li>
-                        <a href="../Cliente/indexcl.jsp">Cliente</a>                       
+                        <a href="http://localhost:8080/ProyectoConstruccion/View/Cliente/indexcl.jsp">Cliente</a>                       
                     </li>
                     <li>
                         
-                        <a href="../Cita/indexc.jsp">Cita</a>                       
+                        <a href="http://localhost:8080/ProyectoConstruccion/View/Cita/indexc.jsp">Cita</a>                       
                     </li>
                     <li>
-                        <a href="../ProcesoJuridico/indexpj.jsp">Proceso Juridico</a>
+                        <a href="http://localhost:8080/ProyectoConstruccion/View/ProcesoJuridico/indexpj.jsp">Proceso Juridico</a>
                     </li>
                     <li>
-                        <a href="../Reporte/indexr.jsp">Reporte</a>
+                        <a href="http://localhost:8080/ProyectoConstruccion/View/Reporte/indexr.jsp">Reporte</a>
                     </li>
                     <li>
-                        <a href="../Factura/indexf.jsp">Factura</a>
+                        <a href="http://localhost:8080/ProyectoConstruccion/View/Factura/indexf.jsp">Factura</a>
                     </li>
                 </ul>
             </nav>

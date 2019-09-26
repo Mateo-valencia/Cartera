@@ -250,7 +250,7 @@ button, .button{
 
 .container .card .face.face1{
     position: relative;
-    background: #01B1EA;
+    background: #9ddff5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -260,11 +260,11 @@ button, .button{
 
 .container .card:hover .face.face1{
     transform: translateY(0px);
-    background: #01B1EA;
+    background: #9ddff5;
 }
 
 .container .card .face.face1 .content{
-    opacity: 0.2;
+    opacity: 0.6;
     transition: 0.5s;
 }
 

@@ -8,7 +8,7 @@
             String Contrasena = request.getParameter("contrasena");
         try {        
             if (db.DB().executeQuery("SELECT * FROM USUARIO WHERE NVARCHAR_LOGIN='"+Usuario+"' and NVARCHAR_CONTRASENA = '"+Contrasena+"'").next()) {
-                    response.sendRedirect("../View/success.jsp");
+                    response.sendRedirect("../View/Home.jsp");
                 }else{ 
                 out.println("<script type=\"text/javascript\"=>");
                 out.println("alert('incorrect');");
