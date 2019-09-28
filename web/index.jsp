@@ -26,7 +26,7 @@
                         <img src="Imagenes/img-01.png" alt="IMG">
                     </div>
 
-                    <form class="login100-form validate-form" method="POST" action="Controller/Validacion.jsp">
+                    <form class="login100-form validate-form" method="POST" action="LoginServlet">
                         <span class="login100-form-title">
                             Gestion De Cartera
                         </span>
@@ -35,7 +35,7 @@
                             <input class="input100" type="text" name="usuario" placeholder="Usuario">
                             <span class="focus-input100"></span>
                             <span class="symbol-input100">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <i class="fa fa-user" aria-hidden="true"></i>
                             </span>
                         </div>
 

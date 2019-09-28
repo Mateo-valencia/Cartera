@@ -42,6 +42,13 @@
                         <a href="http://localhost:8080/ProyectoConstruccion/View/Factura/indexf.jsp">Factura</a>
                     </li>
                 </ul>
+                
+                <div style="padding: 0.6em;">
+                    <form action="http://localhost:8080/ProyectoConstruccion/LoginServlet" method="get">
+                        <button class="btn" style="margin-left: auto; font-size: 20px; background: #222; border: 1px solid #222;">Bienvenido ${sessionScope.usuario}! <i class="fa fa-sign-out-alt"></i></button>
+                    </form>
+                </div>
+                
             </nav>
             <div id="content">
                 <div id="central">
