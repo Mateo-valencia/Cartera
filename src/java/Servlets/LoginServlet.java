@@ -13,7 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import Code.DbConnect;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Mateo
@@ -32,16 +36,19 @@ public class LoginServlet extends HttpServlet {
      */    
         //metodo encargado de la gestión del método POST
     protected void processRequestPOST(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
         
         HttpSession sesion = request.getSession();
-        String usu, pass;
-        usu = request.getParameter("usuario");
-        pass = request.getParameter("contrasena");
-        //deberíamos buscar el usuario en la base de datos, pero dado que se escapa de este tema, ponemos un ejemplo en el mismo código
-        if(usu.equals("admin") && pass.equals("admin") && sesion.getAttribute("admin") == null){
+        DbConnect db = new DbConnect();
+        String usuario, contrasena;
+        ResultSet Resultado;
+        usuario = request.getParameter("usuario");
+        contrasena = request.getParameter("contrasena");
+        Resultado = db.DB().executeQuery("SELECT * FROM USUARIO WHERE NVARCHAR_LOGIN='"+usuario+"' and NVARCHAR_CONTRASENA = '"+contrasena+"'");
+        System.out.println(Resultado);
+        if(Resultado.next() && sesion.getAttribute(usuario) == null){
             //si coincide usuario y password y además no hay sesión iniciada
-            sesion.setAttribute("usuario", usu);
+            sesion.setAttribute("nombre", usuario);
             //redirijo a página con información de login exitoso
             response.sendRedirect("View/Home.jsp");
         }else{
@@ -90,7 +97,11 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequestPOST(request, response);
+        try {
+            processRequestPOST(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

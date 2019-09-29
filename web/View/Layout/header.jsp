@@ -45,7 +45,7 @@
                 
                 <div style="padding: 0.6em;">
                     <form action="http://localhost:8080/ProyectoConstruccion/LoginServlet" method="get">
-                        <button class="btn" style="margin-left: auto; font-size: 20px; background: #222; border: 1px solid #222;">Bienvenido ${sessionScope.usuario}! <i class="fa fa-sign-out-alt"></i></button>
+                        <button class="btn" style="margin-left: auto; font-size: 20px; background: #222; border: 1px solid #222;">Bienvenido ${sessionScope.nombre} ! <i class="fa fa-sign-out-alt"></i></button>
                     </form>
                 </div>
                 
