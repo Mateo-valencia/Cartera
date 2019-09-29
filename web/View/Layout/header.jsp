@@ -6,6 +6,7 @@
         <title>Proyecto</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
         <link rel="stylesheet" type="text/css" href="http://localhost:8080/ProyectoConstruccion/css/style.css">
+        
     </head>
 
     <body>
@@ -41,11 +42,14 @@
                     <li>
                         <a href="http://localhost:8080/ProyectoConstruccion/View/Factura/indexf.jsp">Factura</a>
                     </li>
+                    <li>
+                        <a href="http://localhost:8080/ProyectoConstruccion/View/Usuario/CrearUsuario.jsp">CrearUsuario</a>
+                    </li>
                 </ul>
                 
-                <div style="padding: 0.6em;">
+                <div class="out">
                     <form action="http://localhost:8080/ProyectoConstruccion/LoginServlet" method="get">
-                        <button class="btn" style="margin-left: auto; font-size: 20px; background: #222; border: 1px solid #222;">Bienvenido ${sessionScope.nombre} ! <i class="fa fa-sign-out-alt"></i></button>
+                        <button class="Log_out" type="submit">Bienvenido ${sessionScope.nombre} ! <i class="fa fa-sign-out-alt"></i></button>
                     </form>
                 </div>
                 
