@@ -12,8 +12,8 @@
         </div>
         <div class="face face2">
             <div class="content">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                <a href="#">Read more</a>
+                <p>Este modulo, podra tener un listado de cada uno de los cleintes con sus datos correspondeintes, que se encuentran registrados en el sistema.</p>
+                <a href="Cliente/indexcl.jsp">Consultar</a>
             </div>
         </div>
     </div>
@@ -50,14 +50,16 @@
         </div>
     </div>
 </div>
-            <form action="uploadfile.jsp" method="post" enctype="multipart/form-data">
+        <form action="uploadfile.jsp" method="post" enctype="multipart/form-data" >
             <table>
-                <tr>
-                    <td>
-                        <input type="file" name="file"/>
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="file" name="file"/>                       
+                    </div>
+                    <div class="col-md-4">
                         <input type="submit" value="SUBIR ARCHIVO"/>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             </table>
         </form>
 </center>
