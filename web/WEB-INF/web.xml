@@ -4,9 +4,17 @@
         <servlet-name>ServletMain</servlet-name>
         <servlet-class>Servlets.ServletMain</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegisterUser</servlet-name>
+        <servlet-class>Servlets.RegisterUserServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletMain</servlet-name>
         <url-pattern>/ServletMain</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterUser</servlet-name>
+        <url-pattern>/RegisterUser</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

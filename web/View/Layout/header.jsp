@@ -43,7 +43,7 @@
                         <a href="http://localhost:8080/ProyectoConstruccion/View/Factura/indexf.jsp">Factura</a>
                     </li>
                     <li>
-                        <a href="http://localhost:8080/ProyectoConstruccion/View/Usuario/CrearUsuario.jsp">CrearUsuario</a>
+                        <a href="http://localhost:8080/ProyectoConstruccion/View/Usuario/CrearUsuario.jsp">Registrar Usuario</a>
                     </li>
                 </ul>
                 

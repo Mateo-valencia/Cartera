@@ -44,15 +44,15 @@ public class LoginServlet extends HttpServlet {
         ResultSet Resultado;
         usuario = request.getParameter("usuario");
         contrasena = request.getParameter("contrasena");
-        Resultado = db.DB().executeQuery("SELECT * FROM USUARIO WHERE NVARCHAR_LOGIN='"+usuario+"' and NVARCHAR_CONTRASENA = '"+contrasena+"'");
+        Resultado = db.DB().executeQuery("SELECT NVARCHAR_NOMBRE,NVARCHAR_APELLIDO FROM USUARIO WHERE NVARCHAR_LOGIN='"+usuario+"' and NVARCHAR_CONTRASENA = '"+contrasena+"'");
         System.out.println(Resultado);
         if(Resultado.next() && sesion.getAttribute(usuario) == null){
             //si coincide usuario y password y además no hay sesión iniciada
-            sesion.setAttribute("nombre", usuario);
+            sesion.setAttribute("nombre", Resultado.getString("NVARCHAR_NOMBRE") +" "+ Resultado.getString("NVARCHAR_APELLIDO") );
             //redirijo a página con información de login exitoso
             response.sendRedirect("View/Home.jsp");
         }else{
-            //lógica para login inválido
+            response.sendRedirect("LoginFailed.jsp");
         }
     }
     

@@ -14,10 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-        
-     
-        
+	<link rel="stylesheet" type="text/css" href="css/main.css">                
         <title>Taller ProyectoSW</title>
     </head>
     <body>
@@ -55,7 +52,7 @@
                             </button>
                         </div>
 
-                        <div class="text-center p-t-12">
+                      <!--  <div class="text-center p-t-12">
                             <span class="txt1">
                                 Olvido
                             </span>
@@ -63,13 +60,7 @@
                                 Usuario / Contraseña?
                             </a>
                         </div>
-
-                        <div class="text-center p-t-136">
-                            <a class="txt2" href="#">
-                               Crea Tu Cuenta...
-                                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                            </a>
-                        </div>
+                      -->
                     </form>
                 </div>
             </div>
