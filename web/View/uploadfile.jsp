@@ -14,7 +14,7 @@
     </head>
     <body>
         <%       
-            String archivourl = "C:\\Software\\ProyectoConstruccion\\web\\files";
+            String archivourl = "D:\\Desktop\\PCS\\ProyectoConstruccion\\web\\files";
             
             DiskFileItemFactory factory = new DiskFileItemFactory();
             

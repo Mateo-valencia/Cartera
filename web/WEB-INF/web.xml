@@ -8,6 +8,10 @@
         <servlet-name>RegisterUser</servlet-name>
         <servlet-class>Servlets.RegisterUserServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NewProcessServlet</servlet-name>
+        <servlet-class>Servlets.NewProcessServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletMain</servlet-name>
         <url-pattern>/ServletMain</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>RegisterUser</servlet-name>
         <url-pattern>/RegisterUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewProcessServlet</servlet-name>
+        <url-pattern>/NewProcessServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
