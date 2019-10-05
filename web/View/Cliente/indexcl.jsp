@@ -42,5 +42,5 @@
         }   
     %>
 </table>
-
+    <br>
 <jsp:include page="../Layout/footer.jsp" />

@@ -3,6 +3,7 @@ import Code.DbConnect;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import Model.Abogado;
 
 public class ProcesoJuridico {
     String StringCausa,StringTipoProceso;
@@ -11,13 +12,14 @@ public class ProcesoJuridico {
     DbConnect db = new DbConnect();
     Statement consulta = db.DB();
     ResultSet Resultado;
-    
+    Abogado a = new Abogado();
+    int prueba = 0;
     private String getStringCausa(int IntId) throws SQLException {
         Resultado = db.DB().executeQuery("SELECT NVARCHAR_CAUSA FROM PROCESO_JURIDICO WHERE INT_ID_PROCESO='"+IntId+"'");
         return Resultado.getString("NVARCHAR_CAUSA");
     }
     
-    private void setStringCausa(int IntId,String StringCausa,boolean Existe) throws SQLException {
+    private void setStringCausa(int IntId,String StringCausa) throws SQLException {
         db.DB().executeQuery("UPDATE PROCESO_JURIDICO SET [NVARCHAR_CAUSA] = '"+StringCausa+"' WHERE [INT_ID_PROCESO] = '"+IntId+"'");
     }
     
@@ -26,17 +28,30 @@ public class ProcesoJuridico {
         return Resultado.getString("NVARCHAR_TIPO_PROCESO");
     }
     
-    private void setStringTipoProceso(int IntId,String StringCausa,boolean Existe) throws SQLException {
+    private void setStringTipoProceso(int IntId,String StringCausa) throws SQLException {
         db.DB().executeQuery("UPDATE PROCESO_JURIDICO SET [NVARCHAR_TIPO_PROCESO] = '"+StringCausa+"' WHERE [INT_ID_PROCESO] = '"+IntId+"'");
     }
 
-    public void ProcesoJuridico(int IntIdProceso,String StringCausa,String StringTipoProceso,boolean Existe,int Idfactura ) throws SQLException{
-        if (Existe) {
-            this.setStringCausa(IntIdProceso,StringCausa,Existe);
-            this.setStringCausa(IntIdProceso,StringTipoProceso,Existe);  
-        }else{
-            db.DB().executeQuery("INSERT INTO PROCESO_JURIDICO VALUES('"+StringCausa+"','"+StringTipoProceso+"')");
-        }
+    public void ExistProcesoJuridico(int IntIdProceso,String StringCausa,String StringTipoProceso) throws SQLException{
+            this.setStringCausa(IntIdProceso,StringCausa);
+            this.setStringTipoProceso(IntIdProceso,StringTipoProceso);  
+    }
+    
+    public String NewProcesoJuridico(String StringCausa,String StringTipoProceso,int Idfactura,String Stringnombreabogado,String Stringcontacto,int Inttelefono,String Stringcorreo,String StringDirecion) throws SQLException{
+        try {
+            db.DB().executeQuery("INSERT INTO PROCESO_JURIDICO VALUES('"+Idfactura+"','"+StringCausa+"','"+StringTipoProceso+"')");
+            return "succes";
+        } catch (Exception e) {                    
+            Resultado = db.DB().executeQuery("SELECT INT_ID_PROCESO FROM PROCESO_JURIDICO WHERE INT_ID_FACTURA='"+Idfactura+"' AND NVARCHAR_CAUSA='"+StringCausa+"' AND NVARCHAR_TIPO_PROCESO='"+StringTipoProceso+"'");
+             if (Resultado.next()) {
+                 try {
+                     db.DB().executeQuery("INSERT INTO ABOGADO VALUES('"+Resultado.getInt("INT_ID_PROCESO")+"','"+Stringnombreabogado+"','"+Stringcontacto+"',"+Inttelefono+",'"+Stringcorreo+"','"+StringDirecion+"')");             
+                 } catch (Exception b) {
+                     b.getMessage();
+                 }
+             }
+            return e.getMessage();
+        }         
     }
    
     

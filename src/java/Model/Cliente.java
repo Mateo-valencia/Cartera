@@ -3,17 +3,7 @@ import Code.DbConnect;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-/*
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author USER
- */
 public class Cliente {
     String StringNombre,StringTipo,StringTipoEntidad,StringCorreo;
     int IntTelefono;
@@ -37,7 +27,7 @@ public class Cliente {
     }
 
     private void setStringTipo(String StringName,String StringTipoEntidad,boolean Existe) throws SQLException {
-        db.DB().executeQuery("UPDATE CLIENTE SET [NVARCHAR_TIPO] = '"+StringTipo+"' WHERE [NVARCHAR_NOMBRE] = '"+StringNombre+"'");
+        db.DB().executeQuery("UPDATE CLIENTE SET [NVARCHAR_TIPO] = '"+StringTipoEntidad+"' WHERE [NVARCHAR_NOMBRE] = '"+StringName+"'");
     }
     
     private String getStringTipoEntidad(String StringName) throws SQLException {
@@ -46,7 +36,7 @@ public class Cliente {
     }
 
     private void setStringTipoEntidad(String StringName,String StringTipoEntidad,boolean Existe) throws SQLException {
-        db.DB().executeQuery("UPDATE CLIENTE SET [NVARCHAR_TIPOENTIDAD] = '"+StringTipo+"' WHERE [NVARCHAR_NOMBRE] = '"+StringNombre+"'");
+        db.DB().executeQuery("UPDATE CLIENTE SET [NVARCHAR_TIPOENTIDAD] = '"+StringTipoEntidad+"' WHERE [NVARCHAR_NOMBRE] = '"+StringName+"'");
     }
     
     private String getStringCorreo(String StringName) throws SQLException {
@@ -77,7 +67,7 @@ public class Cliente {
             this.setStringNombre(StringNombre,StringNombre,Existe);
            
         }else{
-            db.DB().executeQuery("INSERT INTO USUARIO VALUES('"+StringNombre+"','"+StringTipo+"','"+StringTipoEntidad+"','"+StringCorreo+"',"+IntTelefono+")");
+            db.DB().executeQuery("INSERT INTO CLIENTE VALUES('"+StringNombre+"','"+StringTipo+"','"+StringTipoEntidad+"','"+StringCorreo+"',"+IntTelefono+")");
         }
     }    
     

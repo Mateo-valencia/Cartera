@@ -5,21 +5,20 @@
  */
 package Servlets;
 
-import Code.DbConnect;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Model.ProcesoJuridico;
-import static java.lang.System.out;
+
 /**
  *
  * @author Mateo
  */
-public class NewProcessServlet extends HttpServlet {
+@WebServlet(name = "NewServlet", urlPatterns = {"/NewServlet"})
+public class NewServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,24 +31,19 @@ public class NewProcessServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String causa,tipo,abogado,seguimiento,contacto,correo,direccion;
-        int factura,telefono;
-        
-        DbConnect db = new DbConnect();
-        factura = Integer.parseInt(request.getParameter("factura"));
-        causa = request.getParameter("causa");
-        tipo = request.getParameter("tipo");
-        abogado = request.getParameter("abogado");
-        contacto = request.getParameter("contacto");
-        telefono = Integer.parseInt(request.getParameter("telefono"));
-        correo = request.getParameter("correo");
-        direccion = request.getParameter("direccion");
-        seguimiento = request.getParameter("seguimiento");
-        
-            ProcesoJuridico p = new ProcesoJuridico();
-            String mensage = p.NewProcesoJuridico(causa, tipo, factura, abogado, contacto, telefono, correo, direccion);
-            request.setAttribute("mensaje", mensage);
-            request.getRequestDispatcher("View/mensaje.jsp").forward(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet NewServlet</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet NewServlet at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

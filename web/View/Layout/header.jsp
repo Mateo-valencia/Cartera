@@ -19,6 +19,9 @@
                 </button>             
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8080/ProyectoConstruccion/View/Factura/indexf.jsp">Facturas</a>
+                        </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="http://localhost:8080/ProyectoConstruccion/View/Cliente/indexcl.jsp">Clientes</a>
                         </li>
@@ -26,11 +29,11 @@
                             <a class="nav-link" href="http://localhost:8080/ProyectoConstruccion/View/Cita/indexc.jsp">Citas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://localhost:8080/ProyectoConstruccion/View/Reporte/indexr.jsp">Reportes</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="http://localhost:8080/ProyectoConstruccion/View/ProcesoJuridico/indexpj.jsp">Procesos Juridicos</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8080/ProyectoConstruccion/View/Reporte/indexr.jsp">Reportes</a>
+                        </li>                        
                         <li class="nav-item">
                             <a class="nav-link" href="http://localhost:8080/ProyectoConstruccion/View/Registros.jsp">Registros</a>
                         </li>
