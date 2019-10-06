@@ -21,7 +21,7 @@ public class DbConnect {
         ResultSet rs;
         
 // MVALENCIA ES MI INSTANCIA DE SQL 
-        String url = "jdbc:sqlserver://DESKTOP-OISOBUG\\MVALENCIA:1433;databaseName=GestionCarteraDB";
+        String url = "jdbc:sqlserver://DESKTOP-9AVABA6\\LOCALHOST:1433;databaseName=GestionCarteraDB";
         try {
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 mycon = DriverManager.getConnection(url,"sa","root");

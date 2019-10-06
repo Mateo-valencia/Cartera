@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 public class Citas {
     String StringFecha,StringDescripcion,StringObjetivo,StringResultado,StringCorreo;
-    int IntIdCitas,IntTelefono;
+    int IntIdCitas,IntTelefono, IntIdUsuario,IntIdCliente;
     
     DbConnect db = new DbConnect();
     Statement consulta = db.DB();
@@ -79,6 +79,25 @@ public class Citas {
         }else{
             db.DB().executeQuery("INSERT INTO CITAS VALUES('"+StringDescripcion+"','"+StringObjetivo+"','"+StringResultado+"','"+StringCorreo+"','"+IntTelefono+"')");
         }
+    }
+    
+    public String guardar(int IdCliente,int IdUsuario,String fecha,String Descripcion,String Objetivo,String estadocita,String telefono,String correo) throws SQLException{
+          try {  
+        db.DB().executeQuery("INSERT INTO CITAS VALUES('"+IdCliente+"','"+IdUsuario+"','"+fecha+"','"+Descripcion+"','"+Objetivo+"','"+estadocita+"','"+telefono+"','"+correo+"')");
+          return "succes";
+          }  catch (Exception e) { 
+              
+              return e.getMessage();
+    }
+    }
+    
+    public String modificarEstado(int intCita, String estado) throws SQLException{
+        try {    
+        db.DB().executeQuery("UPDATE CITAS SET NVARCHAR_RESULTADO = '"+estado+"' WHERE INT_ID_CITAS ='"+intCita+"'");
+            return "succes";
+        }catch (Exception e) { 
+              return e.getMessage();
+    }
     }
     
 }

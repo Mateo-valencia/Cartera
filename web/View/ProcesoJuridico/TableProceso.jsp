@@ -14,75 +14,55 @@
     </button>
 </form>
 <link rel="stylesheet" type="text/css" href="../../css/TableStyle.css">   
-<table style="width:100%">
-  <tr>
-    <th>Nro Proceso</th>
-    <th>Nro Factura</th>
-    <th>Causa</th>
-    <th>Tipo de proceso</th>
-    <th>Nombre del abogado</th>
-    <th>Nombre del Juzgado</th>
-     <th>Opciones</th>
-  </tr>
-    <%  
-    DbConnect db = new DbConnect();
-    ResultSet Consulta = db.DB().executeQuery("EXEC GestionCarteraDB.dbo.[TB_PROCCESOS]"); 
-    int nro = 0;
-        while(Consulta.next()) {  
-            out.println("<tr>");
-               out.println("<td>");
-                    out.println(Consulta.getString("INT_ID_PROCESO"));
-               out.println("</td>");
-               out.println("<td>");
-                    out.println(Consulta.getString("INT_ID_FACTURA"));
-               out.println("</td>");
-               out.println("<td>");
-                    out.println(Consulta.getString("NVARCHAR_CAUSA"));
-               out.println("</td>");
-               out.println("<td>");
-                    out.println(Consulta.getString("NVARCHAR_TIPO_PROCESO"));
-               out.println("</td>");
-               out.println("<td>");
-                    out.println(Consulta.getString("NOMBREABOGADO"));
-               out.println("</td>");
-               out.println("<td>");
-                    out.println(Consulta.getString("NOMBREJUZGADO"));
-               out.println("</td>");
-               
-               out.println("<td>");
-                    out.println("<div class=\"row\">");
-                        out.println("<div class=\"col-md\">");
-                            out.print("<form class=\"form-inline my-2 my-lg-0\" action=\"http://localhost:8080/ProyectoConstruccion/View/seguimiento/indexs.jsp\" method=\"get\"> ");
-                                out.println("<input type=\"hidden\" name=\"nroproceso\" id=\"nroproceso\" value=\"54\">");
-                                %>
-                                <script>
-                                    function myFunction() {
-                                      document.getElementById("nroproceso").value = <% out.println(Consulta.getString("INT_ID_PROCESO")); %>;
-                                    }
-                                </script>
-                                <%
-                                out.print("<button class=\"btn btn-primary my-2 my-sm-0\" type=\"submit\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Nuevo Seguimiento\" onclick=\"myFunction()\">");
-                                    out.println("<i class=\"fa fa-sign-out\" style=\"color:black\">");
-                                    out.println("</i>");
-                                out.println("</button>");
-                            out.print("</form>");
-                        out.println("</div>");  
-
-                        out.println("<div class=\"col-md\">");
-                            out.print("<form class=\"form-inline my-2 my-lg-0\" action=\"http://localhost:8080/ProyectoConstruccion/View/seguimiento/indexs.jsp\" method=\"get\"> ");
-                                out.print("<button class=\"btn btn-primary my-2 my-sm-0\" type=\"submit\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Seguimientos Actuales\">");
-                                    out.println("<i class=\"fa fa-tasks\" style=\"color:black\">");
-                                    out.println("</i>");
-                                out.println("</button>");
-                            out.print("</form>");
-                        out.println("</div>");  
-
-
-                    out.println("</div>");    
-               out.println("</td>");
-            out.println("</tr>");
-        } 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#Nro Proceso</th>
+      <th scope="col">#Nro Factura</th>
+      <th scope="col">Causa</th>
+      <th scope="col">Tipo de proceso</th>
+      <th scope="col">Nombre del abogado</th>
+      <th scope="col">Nombre del Juzgado</th>
+      <th scope="col">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+      <%
+          DbConnect db = new DbConnect();
+          ResultSet Consulta = db.DB().executeQuery("EXEC GestionCarteraDB.dbo.[TB_PROCCESOS]");
+          while (Consulta.next()) {
+      %>
+    <tr>
+      <th><%out.println(Consulta.getString("INT_ID_PROCESO"));%></th>
+      <td><%out.println(Consulta.getString("INT_ID_FACTURA"));%></td>
+      <td><%out.println(Consulta.getString("NVARCHAR_CAUSA"));%></td>
+      <td><%out.println(Consulta.getString("NVARCHAR_TIPO_PROCESO"));%></td>
+      <td><%out.println(Consulta.getString("NOMBREABOGADO"));%></td>
+      <td><%out.println(Consulta.getString("NOMBREJUZGADO"));%></td>
+      <td> 
+          <div class="row">
+              <div class="col-md">
+                  <form class="form-inline my-2 my-lg-0" action="http://localhost:8080/ProyectoConstruccion/View/seguimiento/indexs.jsp" method="get">
+                      <input type="hidden" name="nroproceso" id="nroproceso" value="<%out.println(Consulta.getString("INT_ID_PROCESO"));%>">
+                      <button class="btn btn-primary my-2 my-sm-0" type="submit" data-toggle="tooltip" data-placement="top" title="Nuevo Seguimiento" onclick="myFunction()">
+                                    <i class="fa fa-sign-out" style="color:black"></i>
+                      </button>
+                  </form>
+              </div>
+              <div class="col-md">
+                  <form class="form-inline my-2 my-lg-0" action="http://localhost:8080/ProyectoConstruccion/View/seguimiento/ListaSeguimientos.jsp" method="get">   
+                      <input type="hidden" name="nroproceso1" id="nroproceso1" value="<%out.println(Consulta.getString("INT_ID_PROCESO"));%>">
+                      <button class="btn btn-primary my-2 my-sm-0" type="submit" data-toggle="tooltip" data-placement="top" title="Seguimientos Actuales" onclick="myFunction()">
+                                    <i class="fa fa-tasks" style="color:black"></i>
+                      </button>
+                  </form>
+              </div>
+          </div>
+      </td>
+    </tr>
+    <%
+          }
     %>
- 
+  </tbody>
 </table>
-    <br>
+ <br>

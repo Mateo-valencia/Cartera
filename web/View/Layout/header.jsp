@@ -74,7 +74,7 @@
                             <a class="nav-link" href="http://localhost:8080/ProyectoConstruccion/View/Registros.jsp">Importar Datos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://localhost:8080/ProyectoConstruccion/View/Usuario/CrearUsuario.jsp">Registro Usuarios</a>
+                            <a class="nav-link" href="http://localhost:8080/ProyectoConstruccion/View/Usuario/indexcu.jsp">Registro Usuarios</a>
                         </li>
                         <%}%>
                     </ul>

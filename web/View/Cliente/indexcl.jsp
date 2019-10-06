@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="../../css/TableStyle.css">   
 <table style="width:100%">
   <tr>
+    <th>Idcliente</th>
     <th>NombreCliente</th>
     <th>TipoCliente</th>
     <th>TipoIdentidad</th>
@@ -20,9 +21,12 @@
   </tr>
     <%  
     DbConnect db = new DbConnect();
-    ResultSet Consulta = db.DB().executeQuery("SELECT NVARCHAR_NOMBRE,NVARCHAR_TIPO,NVARCHAR_TIPOENTIDAD,INT_TELEFONO,NVARCHAR_CORREO FROM CLIENTE");    
+    ResultSet Consulta = db.DB().executeQuery("SELECT INT_ID_CLIENTE,NVARCHAR_NOMBRE,NVARCHAR_TIPO,NVARCHAR_TIPOENTIDAD,INT_TELEFONO,NVARCHAR_CORREO FROM CLIENTE");    
         while(Consulta.next()) {  
             out.println("<tr>");
+                out.println("<td>");
+                    out.println(Consulta.getString("INT_ID_CLIENTE"));
+               out.println("</td>");
                out.println("<td>");
                     out.println(Consulta.getString("NVARCHAR_NOMBRE"));
                out.println("</td>");

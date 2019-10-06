@@ -1,8 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="../Layout/header.jsp" />
-
-
-
+<br>
 <form action="http://localhost:8080/ProyectoConstruccion/RegisterUserServlet" method="POST">
     <div class="container">
         <h1>Registrar usuario</h1>

@@ -20,6 +20,10 @@
         <servlet-name>NuevoSeguimientoServlet</servlet-name>
         <servlet-class>Servlets.NuevoSeguimientoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CitaServlet</servlet-name>
+        <servlet-class>Servlets.CitaServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletMain</servlet-name>
         <url-pattern>/ServletMain</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>NuevoSeguimientoServlet</servlet-name>
         <url-pattern>/NuevoSeguimientoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CitaServlet</servlet-name>
+        <url-pattern>/CitaServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
