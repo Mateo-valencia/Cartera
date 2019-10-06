@@ -326,3 +326,7 @@ button, .button{
     background: #333;
     color: #fff;
 }
+
+#btn-volver{
+    width: 688px;
+}

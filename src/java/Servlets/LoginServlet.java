@@ -64,6 +64,7 @@ public class LoginServlet extends HttpServlet {
         String action=(request.getPathInfo()!=null?request.getPathInfo():"/out");
         HttpSession sesion = request.getSession();
         if(action.equals("/out")){
+            sesion.setAttribute("tipo", null);
             sesion.invalidate();
             response.sendRedirect("index.jsp");
         }else{

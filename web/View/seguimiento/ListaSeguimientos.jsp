@@ -4,9 +4,9 @@
 <jsp:include page="../Layout/header.jsp" />
 <br>
 <h1>Listado Seguimientos</h1>
-<link rel="stylesheet" type="text/css" href="../../css/TableStyle.css">
-<table class="table">
-  <thead>
+<div class="table-responsive " >
+    <table class="table table-striped" >
+        <thead>
     <tr>
       <th scope="col">#Nro Seguimiento</th>
       <th scope="col">#Nro Proceso</th>
@@ -32,5 +32,11 @@
           }
     %>
   </tbody>
-</table>
+    </table>
+</div>
+    
+    <div class="text-center" class="btncitas">
+        <button type="volver"  class="btn btn-secondary col-md-2 boton btn-responsive btninter" onclick="location.href = 'http://localhost:8080/ProyectoConstruccion/View/ProcesoJuridico/indexpj.jsp'">Volver</button>
+    </div>
+    </br>
 <jsp:include page="../Layout/footer.jsp" />

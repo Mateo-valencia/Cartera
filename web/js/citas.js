@@ -10,7 +10,7 @@ function validar() {
     if (fecha === "" || telefono === "" || correo === "" ) {
         alert("Todos los campos son obligatorios.");
         return false;
-    }else if((telefono.length < 7) || (telefono.length > 11) ){
+    }else if((telefono.length < 4) || (telefono.length > 20) ){
         alert("Ingrese un número de telefono valido.");
         return false;
     }else if (!expresion.test(correo)) {

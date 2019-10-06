@@ -46,8 +46,8 @@ public class CitaServlet extends HttpServlet {
             try {
                 String mensaje = c.guardar(IdCliente, IdUsuario, fecha, Descripcion, Objetivo, estadocita, telefono, correo);
 
-                request.setAttribute("mensaje", mensaje);
-                request.getRequestDispatcher("View/mensaje.jsp").forward(request, response);
+                request.getSession().setAttribute("respuesta", "correcto1");
+                request.getRequestDispatcher("View/Cita/indexc.jsp").forward(request, response);
             } catch (Exception e) {
                 e.getMessage();
             }
@@ -57,8 +57,8 @@ public class CitaServlet extends HttpServlet {
             try {
                 String mensaje = c.modificarEstado(IdCita, estadocita);
 
-                request.setAttribute("mensaje", mensaje);
-                request.getRequestDispatcher("View/mensaje.jsp").forward(request, response);
+                request.getSession().setAttribute("respuesta", "correcto2");
+                request.getRequestDispatcher("View/Cita/indexc.jsp").forward(request, response);
             } catch (Exception e) {
                 e.getMessage();
             }

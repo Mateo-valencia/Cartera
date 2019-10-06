@@ -52,8 +52,8 @@ public class NewProcessServlet extends HttpServlet {
             
             try {
                 String mensaje = p.NewProcesoJuridico(causa, tipo, factura, abogado, contacto, telefono, correo, direccion,juzgado,ubicacionjuzgado); 
-                request.setAttribute("mensaje", mensaje);
-                request.getRequestDispatcher("View/mensaje.jsp").forward(request, response);
+                request.getSession().setAttribute("respuesta", "correcto");
+                request.getRequestDispatcher("View/ProcesoJuridico/indexpj.jsp").forward(request, response);
             } catch (Exception e) {
                 e.getMessage();
             }

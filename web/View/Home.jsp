@@ -1,7 +1,16 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
     
 <jsp:include page="Layout/header.jsp" /> 
-<%  String tipo = session.getAttribute("tipo").toString();%>
+
+<% 
+    String tipo = "";
+    try {
+           tipo = session.getAttribute("tipo").toString();
+        } catch (Exception e) {
+            out.println(e.getMessage());
+        }
+    
+%>
 <br>
 <div class="card-deck">
     <div class="row">

@@ -23,14 +23,18 @@
         </div>
     </div>
     <div class="form-group ">
-            <label for="causa">Descripcion: </label>
-            <textarea type="text" class="form-control" id="descripcion" rows="6" aria-describedby="descripcion" placeholder="Descripcion del seguimiento" name="descripcion"> </textarea>       
+        <label for="causa">Descripcion: </label>
+        <textarea type="text" class="form-control" id="descripcion" rows="6" aria-describedby="descripcion" placeholder="Descripcion del seguimiento" name="descripcion"> </textarea>       
     </div>
-    
-    <div class="row">
-        <button type="su" class="btn btn-primary col-md-2 boton" >Guardar</button>
+
+    <div class="text-center" class="btncitas">
+        <button type="guardar" class="btn btn-primary col-md-2 boton" >Guardar</button>
+        <button type="button" class="btn btn-secondary col-md-2 boton" onclick="location.href = 'http://localhost:8080/ProyectoConstruccion/View/ProcesoJuridico/indexpj.jsp'">VOLVER</button>
+        
     </div>
     <br>
 </form>
+
+
 <jsp:include page="../Layout/footer.jsp" />
 
