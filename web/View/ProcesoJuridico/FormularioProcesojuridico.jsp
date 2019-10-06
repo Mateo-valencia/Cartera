@@ -1,16 +1,16 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="../Layout/header.jsp" />
 <br>
-<h1>Nuevo Procesos Juridicos</h1>
+<h1>Nuevo Proceso Juridico</h1>
 <form action="http://localhost:8080/ProyectoConstruccion/NewProcessServlet" method="POST">
     <div class="row">
         <div class="form-group  col-md-2">
             <label for="factura">Nro Factura: </label>
-            <input type="number" class="form-control" id="causa" aria-describedby="factura" placeholder="Nro de factura" name="factura">        
+            <input type="number" min="0"  max="20000" class="form-control" id="causa" aria-describedby="factura" placeholder="Nro de factura" name="factura" required>        
         </div>
         <div class="form-group col-md-10">
             <label for="tipo">Tipo de proceso:</label>
-            <select class="form-control" id="etipoproceso" name="tipo">
+            <select class="form-control" id="etipoproceso" name="tipo" required>
                 <option>Juridico</option>
                 <option>Prejuridico</option>
             </select>
@@ -18,41 +18,41 @@
     </div>
     <div class="form-group ">
             <label for="causa">Causa: </label>
-            <textarea type="text" class="form-control" id="causa" rows="6" aria-describedby="causa" placeholder="Causa del proceso jurídico" name="causa"> </textarea>       
+            <textarea type="text" class="form-control" id="causa" rows="6" aria-describedby="causa" placeholder="Causa del proceso jurídico" name="causa" required> </textarea>       
     </div>
     <div class="row">
         <div class="form-group col-md-6">
             <label for="abogado">Nombre del abogado: </label>
-            <input type="text" class="form-control" id="abogado" aria-describedby="abogado" name="abogado">        
+            <input type="text" class="form-control" id="abogado" aria-describedby="abogado" name="abogado" required>        
         </div>
         <div class="form-group col-md-6" >
             <label for="telefono">Telefono del abogado: </label>
-            <input type="number" class="form-control" id="abogado" aria-describedby="telefono" name="telefono">        
+            <input type="number" min="0" max="20000000" class="form-control" id="abogado" aria-describedby="telefono" name="telefono" required>        
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-4">
             <label for="contacto">Contacto del abogado: </label>
-            <input type="text" class="form-control" id="abogado" aria-describedby="contacto" name="contacto">        
+            <input type="text" class="form-control" id="abogado" aria-describedby="contacto" name="contacto" required>        
         </div>
 
         <div class="form-group col-md-4">
             <label for="correo">Correo del abogado: </label>
-            <input type="email" class="form-control" id="abogado" aria-describedby="correo" name="correo">        
+            <input type="email" class="form-control" id="abogado" aria-describedby="correo" name="correo" required>        
         </div>
         <div class="form-group col-md-4">
             <label for="direccion">Direcion del abogado: </label>
-            <input type="text" class="form-control" id="abogado" aria-describedby="direccion" name="direccion">        
+            <input type="text" class="form-control" id="abogado" aria-describedby="direccion" name="direccion" required>        
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
             <label for="nombrejuzgado">Nombre Del juzgado: </label>
-            <input type="text" class="form-control" id="nombrejuzgado" aria-describedby="nombrejuzgado" name="nombrejuzgado">
+            <input type="text" class="form-control" id="nombrejuzgado" aria-describedby="nombrejuzgado" name="nombrejuzgado" required>
         </div>
         <div class="form-group col-md-6">
             <label for="ubicacionjuzgado">Ubicacion Del juzgado </label>
-            <input type="text" class="form-control" id="ubicacionjuzgado" aria-describedby="ubicacionjuzgado" name="ubicacionjuzgado">
+            <input type="text" class="form-control" id="ubicacionjuzgado" aria-describedby="ubicacionjuzgado" name="ubicacionjuzgado" required>
         </div>
     </div>
     <div class="row">

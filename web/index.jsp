@@ -31,7 +31,7 @@
                             Gestion De Cartera
                         </span>
 
-                        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <div class="wrap-input100 validate-input" data-validate = "Ingrese un Usuario Valido">
                             <input class="input100" type="text" name="usuario" placeholder="Usuario">
                             <span class="focus-input100"></span>
                             <span class="symbol-input100">
@@ -39,7 +39,7 @@
                             </span>
                         </div>
 
-                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                        <div class="wrap-input100 validate-input" data-validate = "Ingrese una contrasena valida">
                             <input class="input100" type="password" name="contrasena" placeholder="Contraseña">
                             <span class="focus-input100"></span>
                             <span class="symbol-input100">

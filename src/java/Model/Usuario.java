@@ -70,11 +70,11 @@ public class Usuario {
         return Resultado.getInt("INT_TELEFONO");
     }
 
-    private void setIntTelefono(String StringLogin,int IntTelefono,boolean Existe) throws SQLException {
+    private void setIntTelefono(String StringLogin,String IntTelefono,boolean Existe) throws SQLException {
         db.DB().executeQuery("UPDATE USUARIO SET [INT_TELEFONO] = "+IntTelefono+" WHERE [NVARCHAR_LOGIN] = '"+StringLogin+"'");
     }
     
-    public void Usuario(String StringLogin,String StringApellido,String StringContrasena,String StringCorreo,String StringNombre,String StringTipo,int IntTelefono,boolean Existe) throws SQLException{
+    public void Usuario(String StringLogin,String StringApellido,String StringContrasena,String StringCorreo,String StringNombre,String StringTipo,String IntTelefono,boolean Existe) throws SQLException{
         if (Existe) {
             this.setIntTelefono(StringLogin,IntTelefono,Existe);
             this.setStringApellido(StringLogin,StringApellido,Existe);

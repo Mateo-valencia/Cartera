@@ -32,8 +32,8 @@ public class NewProcessServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String causa,tipo,abogado,seguimiento,contacto,correo,direccion,juzgado,ubicacionjuzgado;
-        int factura,telefono;
+        String causa,tipo,abogado,seguimiento,contacto,correo,direccion,juzgado,ubicacionjuzgado,telefono;
+        int factura;
         
         DbConnect db = new DbConnect();
         factura = Integer.parseInt(request.getParameter("factura"));
@@ -41,7 +41,7 @@ public class NewProcessServlet extends HttpServlet {
         tipo = request.getParameter("tipo");
         abogado = request.getParameter("abogado");
         contacto = request.getParameter("contacto");
-        telefono = Integer.parseInt(request.getParameter("telefono"));
+        telefono = request.getParameter("telefono");
         correo = request.getParameter("correo");
         direccion = request.getParameter("direccion");
         seguimiento = request.getParameter("seguimiento");

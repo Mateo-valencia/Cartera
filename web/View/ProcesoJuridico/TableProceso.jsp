@@ -10,7 +10,7 @@
 <h1>Listado Procesos juridicos</h1>
 <form action="FormularioProcesojuridico.jsp">
     <button  type="submit" class="btn btn-primary" style="margin-bottom: 12px;"/>
-    <i class="fa fa-tasks"> Nuevo Seguimiento</i>
+    <i class="fa fa-tasks"> Nuevo Proceso Juridico</i>
     </button>
 </form>
 <link rel="stylesheet" type="text/css" href="../../css/TableStyle.css">   

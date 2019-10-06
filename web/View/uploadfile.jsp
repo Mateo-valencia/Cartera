@@ -45,6 +45,8 @@
                     db.DB().executeQuery("USE [GestionCarteraDB]; EXEC SP_DATA;");
                 }catch(Exception e){
                            out.println("Cargo bien");
+                          request.getSession().setAttribute("respuesta", "correcto");
+                          request.getRequestDispatcher("Registros.jsp").forward(request, response);
                 }
         %>
     </body>

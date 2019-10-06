@@ -16,7 +16,7 @@
                     <input type="file" class="form-control-file " id="file" name="file">
                 </div>
                   <div class="form-group">
-                      <input type="submit" class="form-control-file btn btn-dark" value="Subir Archivos">
+                      <input type="submit" class="form-control-file btn btn-primary " value="Subir Archivos">
                   </div>
             </form>
           </div>
@@ -28,3 +28,20 @@
 <br><br>
 
 <jsp:include page="Layout/footer.jsp" />
+<%
+
+    String msg = "";
+    try{
+        msg = (String)session.getAttribute("respuesta");
+    }catch(Exception e){
+       
+    }
+    if(msg == "correcto"){
+        
+     %>
+     <script type="text/javascript">InsertarCorrectamente();</script>
+<%   
+    }
+    session.setAttribute("respuesta","incorrecto");
+
+%>

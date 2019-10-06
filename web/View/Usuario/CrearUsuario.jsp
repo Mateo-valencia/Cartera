@@ -1,13 +1,13 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="../Layout/header.jsp" />
-<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-<h1 class="text-info" >Registrar usuario</h1>
+
+
 
 <form action="http://localhost:8080/ProyectoConstruccion/RegisterUserServlet" method="POST">
-    <div class="container text-info ">
-    <div class="col-2"></div> 
-    <div class="col-8 shadow-lg p-3 mb-5 bg-white rounded">             
+    <div class="container">
+        <h1>Registrar usuario</h1>
+    <div class="col-md-2"></div> 
+    <div class="col-md-12 shadow-lg p-3 mb-5 bg-white rounded">             
         <div for="example-text-input" class="form-group row">
             <label  class="col-2 col-form-label">Nombre</label>
             <div class="col-10">
@@ -56,9 +56,28 @@
              </div>    
         </div>
         
-        <input type="submit" class="btn btn-info btn-lg btn-block" value="Crear">  
+        <input type="submit" class="btn btn-primary btn-block" value="Crear">  
     </div>
     <div class="col-2"></div>
 </div>
 </form>
 <jsp:include page="../Layout/footer.jsp" />
+
+
+<%
+
+    String msg = "";
+    try{
+        msg = (String)session.getAttribute("respuesta");
+    }catch(Exception e){
+       
+    }
+    if(msg == "correcto"){
+        
+     %>
+     <script type="text/javascript">InsertarCorrectamente();</script>
+<%   
+    }
+    session.setAttribute("respuesta","incorrecto");
+
+%>

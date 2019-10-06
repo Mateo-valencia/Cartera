@@ -33,13 +33,12 @@ public class RegisterUserServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nombre,apellido,correo,login,contrasena,tipo;
-        int telefono;
+        String nombre,apellido,correo,login,contrasena,tipo,telefono;
         
         DbConnect db = new DbConnect();
         nombre = request.getParameter("TxtNombre");
         apellido = request.getParameter("TxtApellido");
-        telefono = Integer.parseInt(request.getParameter("IntTelefono"));
+        telefono = request.getParameter("IntTelefono");
         correo = request.getParameter("TxtCorreo");
         login = request.getParameter("TxtLogin");
         contrasena = request.getParameter("TxtContrasena");
@@ -50,7 +49,8 @@ public class RegisterUserServlet extends HttpServlet {
             u.Usuario(login, apellido, contrasena, correo, nombre, tipo, telefono,false);
         }
         catch(SQLException e){           
-            response.sendRedirect("View/Usuario/CrearUsuario.jsp");
+            request.getSession().setAttribute("respuesta", "correcto");
+            request.getRequestDispatcher("View/Usuario/CrearUsuario.jsp").forward(request, response);
         }
     }
 
