@@ -37,17 +37,27 @@ public class ProcesoJuridico {
             this.setStringTipoProceso(IntIdProceso,StringTipoProceso);  
     }
     
-    public String NewProcesoJuridico(String StringCausa,String StringTipoProceso,int Idfactura,String Stringnombreabogado,String Stringcontacto,int Inttelefono,String Stringcorreo,String StringDirecion) throws SQLException{
+    public String NewProcesoJuridico(String StringCausa,String StringTipoProceso,int Idfactura,String Stringnombreabogado,String Stringcontacto,int Inttelefono,String Stringcorreo,String StringDirecion,String Stringjuzgado,String Stringubicacionjuzgado) throws SQLException{
         try {
             db.DB().executeQuery("INSERT INTO PROCESO_JURIDICO VALUES('"+Idfactura+"','"+StringCausa+"','"+StringTipoProceso+"')");
             return "succes";
         } catch (Exception e) {                    
             Resultado = db.DB().executeQuery("SELECT INT_ID_PROCESO FROM PROCESO_JURIDICO WHERE INT_ID_FACTURA='"+Idfactura+"' AND NVARCHAR_CAUSA='"+StringCausa+"' AND NVARCHAR_TIPO_PROCESO='"+StringTipoProceso+"'");
              if (Resultado.next()) {
-                 try {
-                     db.DB().executeQuery("INSERT INTO ABOGADO VALUES('"+Resultado.getInt("INT_ID_PROCESO")+"','"+Stringnombreabogado+"','"+Stringcontacto+"',"+Inttelefono+",'"+Stringcorreo+"','"+StringDirecion+"')");             
+                 try {                    
+                     db.DB().executeQuery("INSERT INTO ABOGADO VALUES('"+Resultado.getInt("INT_ID_PROCESO")+"','"+Stringnombreabogado+"','"+Stringcontacto+"',"+Inttelefono+",'"+Stringcorreo+"','"+StringDirecion+"')");      
+                     return "succes";
                  } catch (Exception b) {
-                     b.getMessage();
+                     Resultado = db.DB().executeQuery("SELECT INT_ID_PROCESO FROM PROCESO_JURIDICO WHERE INT_ID_FACTURA='"+Idfactura+"' AND NVARCHAR_CAUSA='"+StringCausa+"' AND NVARCHAR_TIPO_PROCESO='"+StringTipoProceso+"'");         
+                     if (Resultado.next()) {
+                         try {
+                             db.DB().executeQuery("INSERT INTO JUZGADO VALUES("+Resultado.getInt("INT_ID_PROCESO")+",'"+Stringjuzgado+"','"+Stringubicacionjuzgado+"')");
+                             return "succes";
+                         } catch (Exception c) {
+                             c.getMessage();
+                         }
+                     }
+                    b.getMessage();
                  }
              }
             return e.getMessage();

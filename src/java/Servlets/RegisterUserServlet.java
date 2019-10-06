@@ -49,7 +49,7 @@ public class RegisterUserServlet extends HttpServlet {
             Usuario u = new Usuario();
             u.Usuario(login, apellido, contrasena, correo, nombre, tipo, telefono,false);
         }
-        catch(SQLException e){
+        catch(SQLException e){           
             response.sendRedirect("View/Usuario/CrearUsuario.jsp");
         }
     }

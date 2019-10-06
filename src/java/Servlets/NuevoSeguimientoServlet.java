@@ -5,20 +5,21 @@
  */
 package Servlets;
 
+import Code.DbConnect;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import Model.Seguimiento;
 
 /**
  *
  * @author Mateo
  */
-@WebServlet(name = "NewServlet", urlPatterns = {"/NewServlet"})
-public class NewServlet extends HttpServlet {
+public class NuevoSeguimientoServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,18 +32,21 @@ public class NewServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet NewServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet NewServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        DbConnect db = new DbConnect();
+        String Resultado, descripcion;
+        int nroproceso;
+        
+        Resultado = request.getParameter("resultado");
+        descripcion =  request.getParameter("descripcion");
+        nroproceso = Integer.parseInt(request.getParameter("IntTelefono"));
+        
+        Seguimiento s = new Seguimiento();
+        try {
+            String mensaje = s.Seguimiento(nroproceso, Resultado, descripcion);       
+            request.setAttribute("mensaje", mensaje);
+            request.getRequestDispatcher("View/mensaje.jsp").forward(request, response);
+        } catch (Exception e) {
+            e.getMessage();
         }
     }
 

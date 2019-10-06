@@ -18,6 +18,7 @@
         <title>Taller ProyectoSW</title>
     </head>
     <body>
+        <br>
         <div class="limiter">
             <div class="container-login100">
                 <div class="wrap-login100">
@@ -71,7 +72,7 @@
                 </div>
             </div>
         </div>
-
+ <br>
         	
         <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
         <script src="js/popper.js"></script>

@@ -32,7 +32,7 @@ public class NewProcessServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String causa,tipo,abogado,seguimiento,contacto,correo,direccion;
+        String causa,tipo,abogado,seguimiento,contacto,correo,direccion,juzgado,ubicacionjuzgado;
         int factura,telefono;
         
         DbConnect db = new DbConnect();
@@ -45,11 +45,18 @@ public class NewProcessServlet extends HttpServlet {
         correo = request.getParameter("correo");
         direccion = request.getParameter("direccion");
         seguimiento = request.getParameter("seguimiento");
+        juzgado = request.getParameter("nombrejuzgado");
+        ubicacionjuzgado = request.getParameter("ubicacionjuzgado");
         
             ProcesoJuridico p = new ProcesoJuridico();
-            String mensage = p.NewProcesoJuridico(causa, tipo, factura, abogado, contacto, telefono, correo, direccion);
-            request.setAttribute("mensaje", mensage);
-            request.getRequestDispatcher("View/mensaje.jsp").forward(request, response);
+            
+            try {
+                String mensaje = p.NewProcesoJuridico(causa, tipo, factura, abogado, contacto, telefono, correo, direccion,juzgado,ubicacionjuzgado); 
+                request.setAttribute("mensaje", mensaje);
+                request.getRequestDispatcher("View/mensaje.jsp").forward(request, response);
+            } catch (Exception e) {
+                e.getMessage();
+            }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

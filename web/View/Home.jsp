@@ -1,7 +1,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
     
 <jsp:include page="Layout/header.jsp" /> 
-
+<%
+    if (true) {
+            
+        }
+%>
 <br>
 <div class="card-deck">
     <div class="row">
@@ -36,4 +40,5 @@
         </div>  
     </div>
 </div>
+
 <jsp:include page="Layout/footer.jsp" />
