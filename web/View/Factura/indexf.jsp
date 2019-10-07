@@ -10,7 +10,7 @@
 <jsp:include page="../Layout/header.jsp" />
 <h1>Listado Facturas</h1>
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table table-striped" id="datatable">
         <thead>
             <tr>
                 <th>IdFactura</th>

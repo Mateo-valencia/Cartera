@@ -50,7 +50,7 @@ public class RegisterUserServlet extends HttpServlet {
         }
         catch(SQLException e){           
             request.getSession().setAttribute("respuesta", "correcto");
-            request.getRequestDispatcher("View/Usuario/CrearUsuario.jsp").forward(request, response);
+            request.getRequestDispatcher("View/Usuario/indexcu.jsp").forward(request, response);
         }
     }
 

@@ -9,3 +9,23 @@
 <jsp:include page="Listadousuarios.jsp" />
 <jsp:include page="../Layout/footer.jsp" />
 
+<%
+
+    String msg = "";
+    try{
+        msg = (String)session.getAttribute("respuesta");
+    }catch(Exception e){
+       
+    }
+    if(msg == "correcto"){
+        
+     %>
+     <script type="text/javascript">InsertarCorrectamenteU();</script>
+<%   
+    }
+
+    session.setAttribute("respuesta","incorrecto");
+
+%>
+
+

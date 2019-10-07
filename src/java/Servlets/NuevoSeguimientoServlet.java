@@ -43,8 +43,8 @@ public class NuevoSeguimientoServlet extends HttpServlet {
         Seguimiento s = new Seguimiento();
         try {
             String mensaje = s.Seguimiento(nroproceso, Resultado, descripcion);       
-            request.setAttribute("mensaje", mensaje);
-            request.getRequestDispatcher("View/mensaje.jsp").forward(request, response);
+                request.getSession().setAttribute("respuesta", "correcto2");
+                request.getRequestDispatcher("View/ProcesoJuridico/indexpj.jsp").forward(request, response);
         } catch (Exception e) {
             e.getMessage();
         }

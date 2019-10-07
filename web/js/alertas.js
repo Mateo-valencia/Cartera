@@ -20,6 +20,28 @@ function InsertarCorrectamenteC(){
     });
 }
 
+//mensaje de se ha insertado seguimiento
+function InsertarCorrectamenteS(){
+    Swal.fire({        
+        type: 'success',
+        title: 'EXITO',
+        text: 'Se ha podido insertar exitosamente'     
+    }).then(function () {
+        window.location.href = "http://localhost:8080/ProyectoConstruccion/View/ProcesoJuridico/indexpj.jsp";
+    });
+}
+
+//mensaje de se ha insertado usuario
+function InsertarCorrectamenteU(){
+    Swal.fire({        
+        type: 'success',
+        title: 'EXITO',
+        text: 'Se ha podido insertar exitosamente'     
+    }).then(function () {
+        window.location.href = "http://localhost:8080/ProyectoConstruccion/View/Usuario/indexcu.jsp";
+    });
+}
+
 //mensaje de Actualizar una cita 
 function ActualizarCorrectamenteC(){
     Swal.fire({        
@@ -83,7 +105,27 @@ function ErrorLogin(){
     });
 }
 
-
+//Paginacion de las tablas con id
+$(document).ready(function() {    
+    $('#datatable').DataTable({
+    //para cambiar el lenguaje a español
+        "language": {
+                "lengthMenu": "Mostrar _MENU_ registros",
+                "zeroRecords": "No se encontraron resultados",
+                "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                "sSearch": "Buscar:",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sLast":"Último",
+                    "sNext":"Siguiente",
+                    "sPrevious": "Anterior"
+			     },
+			     "sProcessing":"Procesando...",
+            }
+    });     
+});
 
 
 

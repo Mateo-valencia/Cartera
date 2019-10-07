@@ -3,14 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/WINDOWS%20TEN/Desktop/Nueva%20carpeta%20(3)/Nueva%20carpeta/ProyectoConstruccion/web/View/Usuario/indexcu.jsp</file>
-            <file>file:/C:/Users/WINDOWS%20TEN/Desktop/Nueva%20carpeta%20(3)/Nueva%20carpeta/ProyectoConstruccion/web/index.jsp</file>
-            <file>file:/C:/Users/WINDOWS%20TEN/Desktop/Nueva%20carpeta%20(3)/Nueva%20carpeta/ProyectoConstruccion/web/View/Home.jsp</file>
-            <file>file:/C:/Users/WINDOWS%20TEN/Desktop/Nueva%20carpeta%20(3)/Nueva%20carpeta/ProyectoConstruccion/src/java/Servlets/LoginServlet.java</file>
-            <file>file:/C:/Users/WINDOWS%20TEN/Desktop/Nueva%20carpeta%20(3)/Nueva%20carpeta/ProyectoConstruccion/web/View/Usuario/Listadousuarios.jsp</file>
-            <file>file:/C:/Users/WINDOWS%20TEN/Desktop/Nueva%20carpeta%20(3)/Nueva%20carpeta/ProyectoConstruccion/web/js/alertas.js</file>
-            <file>file:/C:/Users/WINDOWS%20TEN/Desktop/Nueva%20carpeta%20(3)/Nueva%20carpeta/ProyectoConstruccion/web/View/Layout/footer.jsp</file>
-            <file>file:/C:/Users/WINDOWS%20TEN/Desktop/Nueva%20carpeta%20(3)/Nueva%20carpeta/ProyectoConstruccion/web/View/Layout/header.jsp</file>
+            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/View/Usuario/CrearUsuario.jsp</file>
+            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/src/java/Servlets/RegisterUserServlet.java</file>
+            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/src/java/Servlets/NuevoSeguimientoServlet.java</file>
+            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/css/style.css</file>
+            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/View/Layout/header.jsp</file>
+            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/src/java/Servlets/NewProcessServlet.java</file>
+            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/js/alertas.js</file>
+            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/View/ProcesoJuridico/indexpj.jsp</file>
+            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/View/seguimiento/ListaSeguimientos.jsp</file>
+            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/View/Usuario/indexcu.jsp</file>
         </group>
     </open-files>
 </project-private>

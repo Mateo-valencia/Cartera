@@ -11,7 +11,7 @@
     <button class="btn btn-primary"  type="submit" style="margin-bottom: 8px;" >Crear nueva cita</button></hr>  
 </form>
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table table-striped" id="datatable">
         <thead>
             <tr>
                 <th scope="col">IdCita</th>

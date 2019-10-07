@@ -11,7 +11,7 @@
 <h1>Listado clientes</h1>
 
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table table-striped" id="datatable">
         <thead>
         <tr>
             <th>Idcliente</th>

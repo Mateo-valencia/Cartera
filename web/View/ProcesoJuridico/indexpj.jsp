@@ -18,7 +18,11 @@
      %>
      <script type="text/javascript">InsertarCorrectamentePJ();</script>
 <%   
-    }
+    }else if(msg == "correcto2"){
+        %>
+     <script type="text/javascript">InsertarCorrectamenteS();</script>
+<% 
+}
     session.setAttribute("respuesta","incorrecto");
 
 %>

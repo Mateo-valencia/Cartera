@@ -5,7 +5,7 @@
 <br>
 <h1>Listado Seguimientos</h1>
 <div class="table-responsive " >
-    <table class="table table-striped" >
+    <table class="table table-striped" id="datatable">
         <thead>
     <tr>
       <th scope="col">#Nro Seguimiento</th>
@@ -40,3 +40,25 @@
     </div>
     </br>
 <jsp:include page="../Layout/footer.jsp" />
+
+<%
+
+    String msg = "";
+    try{
+        msg = (String)session.getAttribute("respuesta");
+    }catch(Exception e){
+       
+    }
+    if(msg == "correcto1"){
+        
+     %>
+     <script type="text/javascript">InsertarCorrectamenteC();</script>
+<%   
+    }else if(msg == "correcto2"){
+     %>
+     <script type="text/javascript">ActualizarCorrectamenteC();</script>
+<%  
+}
+    session.setAttribute("respuesta","incorrecto");
+
+%>

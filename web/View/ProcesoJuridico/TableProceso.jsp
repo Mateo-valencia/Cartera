@@ -13,7 +13,7 @@
     <button  type="submit" class="btn btn-primary" style="margin-bottom: 12px;"/><i class="fa fa-tasks"></i>Nuevo Proceso Juridico</button>
 </form>
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table table-striped" id="datatable">
         <thead>
         <tr>
             <th scope="col">#Nro Proceso</th>
