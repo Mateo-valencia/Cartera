@@ -12,6 +12,7 @@
     
 %>
 <br>
+<br>
 <div class="card-deck">
     <div class="row">
         <div class="col-md-3 col-lg-3 card border-light">
@@ -20,7 +21,7 @@
             </a>
             <div class="card-body">
                 <h5 class="card-title">Clientes</h5>
-                <p class="card-text">Este modulo, podra tener un listado de cada uno de los cleintes con sus datos correspondeintes, que se encuentran registrados en el sistema.</p>
+                <p class="card-text">En Este modulo, podra tener un listado de cada uno de los clientes con sus datos correspondientes, que se encuentran registrados en el sistema.</p>
             </div>
         </div>
         <div class="col-md-1 col-lg-1"></div>
@@ -30,7 +31,7 @@
             </a>
             <div class="card-body">
                 <h5 class="card-title">Citas</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">En este modulo podra realizar un seguimiento a cada una de las citas programadas y podra crear una nueva cita de ser necesario.</p>
             </div>
         </div>
         <div class="col-md-1 col-lg-1"></div>
@@ -40,7 +41,7 @@
             </a>
             <div class="card-body">
                 <h5 class="card-title">Reportes</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text">En este modulo se podran encontrar una variedad de reportes, mediante la cual se facilitara el entendimiento de la informacion presentada en el sistema</p>
             </div>
         </div>  
     </div>
