@@ -34,7 +34,11 @@
   </tbody>
     </table>
 </div>
-    
+    <div class="row">
+        <div class="col-md-5" style="margin-left: auto; margin-right: auto;">
+            <jsp:include page="../Charts/Chart2.jsp" />
+        </div>
+    </div>
     <div class="text-center" class="btncitas">
         <button type="volver"  class="btn btn-secondary col-md-2 boton btn-responsive btninter" onclick="location.href = 'http://localhost:8080/ProyectoConstruccion/View/ProcesoJuridico/indexpj.jsp'">Volver</button>
     </div>
