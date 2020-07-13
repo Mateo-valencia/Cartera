@@ -3,16 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/View/Usuario/CrearUsuario.jsp</file>
-            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/src/java/Servlets/RegisterUserServlet.java</file>
-            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/src/java/Servlets/NuevoSeguimientoServlet.java</file>
-            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/css/style.css</file>
-            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/View/Layout/header.jsp</file>
-            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/src/java/Servlets/NewProcessServlet.java</file>
-            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/js/alertas.js</file>
-            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/View/ProcesoJuridico/indexpj.jsp</file>
-            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/View/seguimiento/ListaSeguimientos.jsp</file>
-            <file>file:/C:/Users/sebastian/Desktop/PROYECTO/ProyectoConstruccion/web/View/Usuario/indexcu.jsp</file>
+            <file>file:/D:/Desktop/PCS/temp/ProyectoConstruccion/web/View/Usuario/CrearUsuario.jsp</file>
+            <file>file:/D:/Desktop/PCS/temp/ProyectoConstruccion/web/index.jsp</file>
+            <file>file:/D:/Desktop/PCS/temp/ProyectoConstruccion/web/View/Factura/indexf.jsp</file>
+            <file>file:/D:/Desktop/PCS/temp/ProyectoConstruccion/web/View/Charts/Chart1.jsp</file>
+            <file>file:/D:/Desktop/PCS/temp/ProyectoConstruccion/src/java/Code/DbConnect.java</file>
+            <file>file:/D:/Desktop/PCS/temp/ProyectoConstruccion/web/View/Home.jsp</file>
         </group>
     </open-files>
 </project-private>

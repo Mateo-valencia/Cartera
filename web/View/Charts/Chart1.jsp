@@ -8,7 +8,7 @@ Gson gsonObj = new Gson();
 Map<Object,Object> map = null;
 List<Map<Object,Object>> list = new ArrayList<Map<Object,Object>>();
 DbConnect db = new DbConnect();
-int a = 0,b=0,c=0,d=0;
+int a = 0,b=0,c=0,d=0,e=0;
 ResultSet Consulta = db.DB().executeQuery("EXEC GestionCarteraDB.dbo.SP_CHART1");
 if (Consulta.next()) {
         a = Consulta.getInt("A");
